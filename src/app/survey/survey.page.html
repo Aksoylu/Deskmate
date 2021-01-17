@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Değerlendirme {{surveyId + 1}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+<ion-list>
+    
+
+
+  <ion-card>
+
+    <p class="infotext">Uygulamaya ilk girdiğinizde sizi daha yakından tanıyabilmek için 20 sorudan oluşan bir anket uygularız. <br> Test boyunca kendinize dürüst olun. Bu veri size yardım etmek isteyen bir yapay zeka tarafından kullanılacaktır. </p>
+
+    <ion-card-header color="danger">
+      <ion-card-title  ><ion-icon name="help-circle-outline" ></ion-icon>  </ion-card-title>
+      <h3> {{currentSurvey.ques}} </h3>
+    </ion-card-header>
+  
+  </ion-card>
+
+
+  <ion-card id="A"  (click)="getAnswer('A')"  >
+    <ion-card-header>
+      <ion-card-title   >A.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content id="A_">
+      {{currentSurvey.A}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="B"  (click)="getAnswer('B')" >
+    <ion-card-header>
+      <ion-card-title>B.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content id="B_">
+      {{currentSurvey.B}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="C"  (click)="getAnswer('C')" >
+    <ion-card-header>
+      <ion-card-title>C.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content id="C_">
+      {{currentSurvey.C}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card  id="D"  (click)="getAnswer('D')" >
+    <ion-card-header>
+      <ion-card-title>D.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content id="D_">
+      {{currentSurvey.D}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="E"  (click)="getAnswer('E')" >
+    <ion-card-header>
+      <ion-card-title>E.</ion-card-title>
+    </ion-card-header>
+    <ion-card-content id="E_">
+      {{currentSurvey.E}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-list>
+
+</ion-content>

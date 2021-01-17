@@ -1,0 +1,44 @@
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="light">
+        <ion-icon slot="start" name="ios-arrow-back"></ion-icon>
+        {{isPremium}}
+      </ion-button>
+    </ion-buttons>
+    <ion-title>&nbsp;</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" src="../../assets/checkmark-filled.svg"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen="true" slot="fixed" force-overscroll="true" >
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+          <img src="../../assets/profile.png" width="160px" height="160px" alt="">
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="user-meta ion-text-center">
+          <h3 class="playername">{{username}}</h3>
+          <h5 class="country">{{userjob}}</h5>
+          <h6 class="ranking">Yatkınlık:<ion-chip>
+              <ion-label>{{userrank}}</ion-label>
+            </ion-chip>
+          </h6>
+        </div>
+
+        <ion-button expand="full" (click)="anket()" style="--background	: #edd23e; --background-activated	:#ffe65c; font-weight: bold; "><ion-icon name="star"></ion-icon> &nbsp;Kişilik Testini Tekrar Çözün</ion-button>
+        <ion-button expand="full" (click)="verimAnalizi()" class="standartbutton"><ion-icon name="stats-chart-outline"></ion-icon>&nbsp; Verim Analizi</ion-button>
+        <ion-button expand="full" class="standartbutton" (click)="podcast()"><ion-icon name="trophy-outline"></ion-icon>&nbsp; Verimlilik İçin Size Özel İçerikler</ion-button>
+        <ion-button expand="full" class="standartbutton" (click)="advise()"><ion-icon name="chatbox-ellipses-outline"></ion-icon>&nbsp; Profesyonel Danışmanlara Sorun</ion-button>
+        <ion-button expand="full" class="standartbutton" (click)="logout()"><ion-icon name="exit-outline"></ion-icon>&nbsp; Hesaptan Çıkış Yap</ion-button>
+
+      </div>
+    </div>
+</ion-content>

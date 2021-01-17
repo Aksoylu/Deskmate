@@ -1,0 +1,50 @@
+<ion-header translucent>
+
+</ion-header>
+
+<ion-toolbar>
+  <ion-title size="medium" style="text-align: left; padding-left: 5%;">İş planınız
+  </ion-title>
+
+  <div class="item-note" style="text-align: right; " item-end>
+    <ion-button shape="round" style="width: 20%;"size="small" fill="outline" class="addTask" color="tertiary"  (click)="addTaskModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </div>
+
+</ion-toolbar>
+
+
+
+
+
+<ion-content fullscreen="true" slot="fixed" force-overscroll="true" >
+  <div class="container">
+      <calendar class="calendar"
+    [calendarMode]="calendar.mode"
+    [currentDate]="calendar.currentDate"
+    (onTimeSelected)="onTimeSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    noEventsLabel="Görevler:"
+    startHour="6"
+    endHour="24"
+    step="30"
+    class="calendar"></calendar>
+ </div>
+  <ion-list >
+    <ion-item *ngFor="let todo of taskList.slice().reverse(); let i = index" (click)="renameTask(i)">
+      <div *ngIf="todo.isFinished == false"> {{todo.taskName}}</div>
+      <div *ngIf="todo.isFinished == true" class="task_finished"> {{todo.taskName}}</div>
+    <div class="item-note" slot="end">
+    <ion-button color="danger" clear (click)="deleteTask(i)">
+    <ion-icon name="trash"></ion-icon>
+    </ion-button>
+    </div>
+    </ion-item>
+
+
+  </ion-list>
+
+  <div *ngIf="refresh_flag == true"  (change)="renderDayTasks()" > {{refresh_flag}}</div>
+
+</ion-content>

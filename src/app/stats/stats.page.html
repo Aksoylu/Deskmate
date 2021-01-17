@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>İstatistikler</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="tabs" text="Geri" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header color="light"></ion-list-header>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Çalışmalarınızda Başarı Oranınız:</ion-card-subtitle>
+      <ion-card-title>Verim Analizi</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barChart></canvas>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Neye göre hesaplanır ?</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ul> 
+       
+       <li> Planladığınız çalışma saatleri</li>  <li> Bu çalışmaların başarı ile tamamlanma oranı</li> <li> Size sorduğumuz (ve dürüst davrandığınız) anketler </li> <li> Bulunduğunuz şehrin hava durumu</li>  <li> görevleri yapma saatleriniz </li> </ul> ve benzeri
+        parametreleri kullanarak; Bilgisayar Bilimi'nin bir dalı olan "Bulanık Mantık" modellemesi ile verim puanınız günlük olarak hesaplanır ve bu tabloda size gösterilir. <br><br>
+
+        Gün içerisinde çok fazla çalışma veya tamamen istek kaybı gibi verim düşürücü durumlara uğramamanız için verim analizinizi takip etmeniz önemlidir.
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

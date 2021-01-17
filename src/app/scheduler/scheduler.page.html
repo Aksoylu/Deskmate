@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()" default-href="tabs" text="Geri" ></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{taskname}}</ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <center>
+    <p class='{{_event}}'> {{event}}</p>
+
+
+  <br>
+
+<div (click)="timerEnable()"> 
+  <circle-progress
+  [percent]=" 100 -timePercent"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="300"
+  >
+  </circle-progress>
+</div>
+
+  <ion-fab-button style="--background:#78C000" (click)="timerEnable()">
+    <ion-icon [name]="fabIcon"></ion-icon>
+  </ion-fab-button>
+
+
+<p> {{ minuteLeft }}  dakika {{ secondLeft }} saniye</p>
+
+<!-- 
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div class="relax">
+        1 of 3
+      </div>
+      <br>
+      <div class="relax">
+        1 of 3
+      </div>
+      <br>
+      <div class="relax">
+        1 of 3
+      </div>
+    </ion-col>
+
+    <ion-col>
+      <div class="work ">
+        1 of 2
+      </div>
+    </ion-col>
+
+
+  </ion-row>
+
+</ion-grid>
+-->
+
+
+<br>
+
+<audio controls #audio style="visibility: hidden;">
+  <source src="../../assets/triangle.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+<!--
+
+<ion-button class="specialbutton" (click)="exit()" shape="round">Çıkış</ion-button>
+ -->
+
+
+</center>
+
+</ion-content>

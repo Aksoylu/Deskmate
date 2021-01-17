@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Deskmate'e Hoşgeldiniz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+         <center><img src="../../assets/logo.png"> </center>
+         <div text-center>
+          <h3 > {{context_title}}</h3>
+        </div>
+         <div class="source" *ngIf="context == 'login'" > 
+          <div padding>
+            <ion-item>
+              <ion-input  [(ngModel)]="loginForm.mail"  name="name" type="text" placeholder="E-Posta" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="loginForm.pass" name="password" type="password" placeholder="Parola" ngModel required></ion-input>
+            </ion-item>
+
+          </div>
+          <br>
+          <div padding>
+            <center> 
+            <ion-button  size="medium" type="submit" (click)="login()" [disabled]="form.invalid" >Giriş Yap</ion-button>
+            <ion-button  size="medium" type="submit" (click)="switchContext()">Hesap Oluştur</ion-button>
+            </center>
+          </div>
+        </div>
+
+        <div class="source" *ngIf="context == 'signup'" > 
+          <div padding>
+            <ion-item>
+              <ion-input  [(ngModel)]="signupForm.name" name="name" type="text" placeholder="İsim Soyisim" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="signupForm.mail" name="email" type="email" placeholder="E-posta" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="signupForm.pass" name="password" type="password" placeholder="Parola" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="signupForm.newpass" name="confirm" type="password" placeholder="Tekrar parola" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <br>
+            <center> 
+            <ion-button  size="medium" type="submit" (click)="signup()" [disabled]="form.invalid">Hesap Oluştur</ion-button>
+            <ion-button  size="medium" type="submit" (click)="switchContext()">Girişe Dön</ion-button>
+            </center>
+          </div>
+        </div>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
