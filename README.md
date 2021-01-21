@@ -5,15 +5,27 @@ Deskmate, kişiliğinizi analiz eden ve işlerinizi bulanık mantık & yapay zek
 
 Uygulamayı kullanabilmek için giriş yapmalısınız. Eğer hesabınız yoksa üye olabilirsiniz.
 
+![alt text](v1.gif)
+
 
 İlk defa giriş yaptığınızda sizi bir anket karşılar. Bu ankete verdiğiniz cevaplara göre yapay zeka kişiliğinizi tanımlar ve işlerinizi planlamanızda veri olarak kullanır.
 
+![alt text](v2.gif)
+
+
 Anketi tamamlamanızın ardından günlük görevlerinizi görebildiğiniz&düzenleyebildiğiniz bir ana ekran sizi karşılar. Ek olarak aylık plan yapabilir veya profilinize, verimlilik özetinize göz atabilirsiniz.
+
+![alt text](v3.gif)
+
 
 Bir görevi, görevin yanındaki yeşil başlatma tuşu ile başlatabilirsiniz. Yapay zeka size özgü bir biçimde çalışma-mola periyotlarınızı hesaplayacak ve sizin için süre tutacaktır. 
 
+![alt text](v4.gif)
+
+
 Son olarak verim grafiğinizi, kişisel özetinizi ve verimlilik hakkında daha bir çok içeriği bulabileceğiniz bir profil ekranı mevcuttur.
 
+![alt text](v5.gif)
 
 
 ## Kurulum ve Çalıştırma
